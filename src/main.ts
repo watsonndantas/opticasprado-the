@@ -2,7 +2,7 @@
 
 const WHATSAPP_NUMBER = "5586994600287";
 const WHATSAPP_MESSAGE =
-  "Olá! Gostaria de agendar uma consulta no Consultório César Prado.";
+  "Olá! Gostaria de agendar uma consulta no Consultório Raimundo Prado.";
 
 function whatsappUrl(): string {
   const text = encodeURIComponent(WHATSAPP_MESSAGE);
@@ -61,7 +61,7 @@ function bindContactForm(): void {
     }
 
     const text = [
-      "Olá! Gostaria de agendar uma consulta no Consultório César Prado.",
+      "Olá! Gostaria de agendar uma consulta no Consultório Raimundo Prado.",
       `Nome: ${nome}`,
       `WhatsApp: ${telefone}`,
       mensagem,
