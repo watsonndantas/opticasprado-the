@@ -10,7 +10,7 @@
   --whatsapp: #25d366;
   --shadow: 0 18px 50px rgba(22, 22, 22, 0.08);
   --radius: 18px;
-  --header-h: 76px;
+  --header-h: 88px;
   --font-sans: "Outfit", system-ui, sans-serif;
   --font-serif: "Cormorant Garamond", Georgia, serif;
 }
@@ -65,7 +65,9 @@ p {
 .section-intro p,
 .product-card p,
 .localizacao-copy p,
-.contato-copy > p {
+.contato-copy > p,
+.journey p,
+.dual-note {
   text-align: justify;
   text-justify: inter-word;
   hyphens: auto;
@@ -110,6 +112,20 @@ p {
   gap: 24px;
 }
 
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.brand-divider {
+  width: 1px;
+  height: 40px;
+  background: var(--line);
+  flex-shrink: 0;
+}
+
 .brand {
   display: flex;
   align-items: center;
@@ -117,13 +133,48 @@ p {
   min-width: 0;
 }
 
+.brand--clinic {
+  flex-shrink: 1;
+}
+
+.brand--optica {
+  flex-shrink: 0;
+}
+
+.clinic-mark {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: var(--red);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.clinic-mark--lg {
+  width: 72px;
+  height: 72px;
+  border-radius: 18px;
+  font-size: 1.55rem;
+}
+
 .brand-logo-wrap {
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   overflow: hidden;
   flex-shrink: 0;
   background: var(--red);
+}
+
+.brand-logo-wrap--lg {
+  width: 72px;
+  height: 72px;
 }
 
 .brand-logo {
@@ -137,6 +188,15 @@ p {
   display: flex;
   flex-direction: column;
   line-height: 1.15;
+}
+
+.brand--clinic .brand-text strong {
+  font-size: 1.02rem;
+}
+
+.brand--optica .brand-text strong {
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
 .brand-text strong {
@@ -222,8 +282,8 @@ p {
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 64px;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 48px;
   align-items: center;
 }
 
@@ -245,8 +305,8 @@ p {
 }
 
 .hero h1 {
-  font-size: clamp(2.6rem, 5vw, 4.4rem);
-  max-width: 13ch;
+  font-size: clamp(2.4rem, 4.6vw, 4rem);
+  max-width: 16ch;
 }
 
 .hero h1 em {
@@ -287,6 +347,101 @@ p {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 36px;
+}
+
+.dual-brands {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-top: 28px;
+}
+
+.dual-brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+  padding: 14px 16px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.dual-brand--primary {
+  border-color: #f3c4c4;
+  box-shadow: 0 0 0 1px rgba(242, 12, 12, 0.08);
+}
+
+.dual-plus {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  color: var(--red);
+  font-weight: 600;
+}
+
+.dual-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.dual-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.dual-note {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+.jornada {
+  padding: 8px 0 88px;
+}
+
+.journey {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.journey li {
+  padding: 22px 20px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.journey li span {
+  display: block;
+  margin-bottom: 16px;
+  color: var(--red);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.journey strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.journey p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: left;
 }
 
 .hero-portrait {
@@ -415,9 +570,9 @@ p {
   z-index: 1;
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 792 / 749;
   object-fit: cover;
-  object-position: 32% 10%;
+  object-position: 22% 42%;
   border-radius: var(--radius);
   display: block;
   box-shadow: var(--shadow);
@@ -719,6 +874,17 @@ html.js [data-reveal].is-visible {
   }
 }
 
+@media (max-width: 1180px) {
+  .nav {
+    gap: 16px;
+    font-size: 0.88rem;
+  }
+
+  .brand--optica .brand-text {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   .site-header {
     height: auto;
@@ -745,8 +911,28 @@ html.js [data-reveal].is-visible {
   .hero,
   .consultas,
   .produtos,
-  .contato {
+  .contato,
+  .jornada {
     padding: 48px 0 72px;
+  }
+
+  .brand-lockup {
+    gap: 10px;
+  }
+
+  .brand--optica .brand-text,
+  .brand-divider {
+    display: none;
+  }
+
+  .dual-brands,
+  .journey {
+    grid-template-columns: 1fr;
+  }
+
+  .dual-plus {
+    justify-self: center;
+    line-height: 1;
   }
 
   .hero-grid,
@@ -782,7 +968,8 @@ html.js [data-reveal].is-visible {
   }
 
   .portrait-photo {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 792 / 749;
+    object-position: 22% 42%;
   }
 
   .portrait-frame::before {
