@@ -626,6 +626,14 @@ p {
   margin-bottom: 48px;
 }
 
+.produtos .section-intro {
+  max-width: none;
+}
+
+.produtos .section-intro p {
+  max-width: none;
+}
+
 .section-intro h2,
 .contato-copy h2 {
   font-size: clamp(2rem, 4vw, 3.2rem);

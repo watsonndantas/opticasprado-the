@@ -2,7 +2,7 @@
 
 const WHATSAPP_NUMBER = "5586994600287";
 const WHATSAPP_MESSAGE =
-  "Olá! Gostaria de agendar uma consulta no Consultório Raimundo Prado.";
+  "Muito obrigado pela confiança no nosso trabalho. Se deseja atendimento no consultório, avise o dia e horário disponível para acertarmos a sua ida. Já se a consulta for domiciliar, informe o seu endereço, dia e local, bem como a localização, para assim que retornarmos a resposta, finalizarmos a confirmação da mesma. Desde já, obrigado pela escolha da nossa empresa.";
 
 function whatsappUrl(): string {
   const text = encodeURIComponent(WHATSAPP_MESSAGE);
@@ -61,7 +61,7 @@ function bindContactForm(): void {
     }
 
     const text = [
-      "Olá! Gostaria de agendar uma consulta no Consultório Raimundo Prado.",
+      WHATSAPP_MESSAGE,
       `Nome: ${nome}`,
       `WhatsApp: ${telefone}`,
       mensagem,
